@@ -1,21 +1,20 @@
-$quote-width: 50px;
+$quote-width: 40px;
+$quote-width-sm: 25px;
 
 #slider {
   .container {
     position: relative;
     max-width: 1500px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     .slider-wrap {
       .slider {
         width: 100%;
-        margin: 20px auto;
         margin: 0;
         text-align: center;
         color: $main-color;
-        margin-top: 0;
-        margin-bottom: 0;
         .slide {
           height: 300px;
-          overflow: hidden;
           display: flex;
           align-items: center;
           .photo {
@@ -31,10 +30,11 @@ $quote-width: 50px;
             }
             .name {
               font-size: 20px;
-              margin-top: 10px;
+              margin: 10px auto 0px;
             }
             .quote {
-              width: $quote-width;
+              font-size: $quote-width;
+              color: #0133cb;
               position: absolute;
               &:nth-of-type(1) {
                 left: calc(#{$quote-width});
@@ -93,6 +93,177 @@ $quote-width: 50px;
     button::before {
       color: black;
       opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 0) {
+  #slider {
+    .container {
+      .slider-wrap {
+        .slider {
+          margin: 0;
+          .slide {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 600px;
+            .photo {
+              margin-bottom: 80px;
+              width: 200px;
+            }
+            .quote-container {
+              padding: 0 50px;
+              p {
+                font-size: 18px;
+              }
+              .name {
+                font-size: 12px;
+              }
+              .quote {
+                font-size: $quote-width-sm;
+                position: absolute;
+                &:nth-of-type(1) {
+                  left: calc(#{$quote-width-sm});
+                  top: calc(-#{$quote-width-sm});
+                }
+                &:nth-of-type(2) {
+                  right: calc(#{$quote-width-sm});
+                  bottom: calc(-#{$quote-width-sm} + 34px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  #slider {
+    .container {
+      .slider-wrap {
+        .slider {
+          .slide {
+            height: 600px;
+            .photo {
+              width: 250px;
+            }
+            .quote-container {
+              p {
+                font-size: 24px;
+              }
+              .name {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  #slider {
+    .container {
+      .slider-wrap {
+        .slider {
+          .slide {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            .photo {
+              margin-bottom: 0px;
+            }
+            .quote-container {
+              padding: 0 100px;
+              p {
+                font-size: 30px;
+              }
+              .name {
+                font-size: 20px;
+              }
+              .quote {
+                width: $quote-width;
+                position: absolute;
+                &:nth-of-type(1) {
+                  left: calc(#{$quote-width});
+                  top: calc(-#{$quote-width});
+                }
+                &:nth-of-type(2) {
+                  right: calc(#{$quote-width});
+                  bottom: calc(-#{$quote-width} + 40px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  #slider {
+    .container {
+      .slider-wrap {
+        .slider {
+          .slide {
+            height: 450px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #slider {
+    .container {
+      position: relative;
+      max-width: 1500px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .slider-wrap {
+        .slider {
+          width: 100%;
+          margin: 0;
+          text-align: center;
+          color: $main-color;
+          .slide {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            .photo {
+              width: 300px;
+            }
+            .quote-container {
+              position: relative;
+              margin: 0 auto;
+              padding: 0 100px;
+              p {
+                font-weight: 300;
+                font-size: 30px;
+              }
+              .name {
+                font-size: 20px;
+                margin: 10px auto 0px;
+              }
+              .quote {
+                width: $quote-width;
+                position: absolute;
+                &:nth-of-type(1) {
+                  left: calc(#{$quote-width});
+                  top: calc(-#{$quote-width});
+                }
+                &:nth-of-type(2) {
+                  right: calc(#{$quote-width});
+                  bottom: calc(-#{$quote-width} + 40px);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -4,15 +4,14 @@
   .container {
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     font-weight: 700;
-    width: max-content;
+    white-space: nowrap;
     h1 {
-      font-size: 65px;
+      font-size: 70px;
       margin: 0 0 15px;
       letter-spacing: 5px;
     }
     p {
-      line-height: 1.2;
-      font-size: 23px;
+      font-size: 30px;
       letter-spacing: 2px;
     }
   }
@@ -42,5 +41,26 @@ header {
   }
   .container {
     z-index: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero {
+    .container {
+      h1 {
+        font-size: 55px; //
+      }
+      p {
+        font-size: 25px; //
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  #hero {
+    .container {
+      white-space: initial;
+    }
   }
 }
