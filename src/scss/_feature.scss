@@ -1,0 +1,23 @@
+#feature {
+  background-color: #fbfbfb;
+  .container {
+    display: flex;
+    .img__container {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .copy__container {
+      text-align: left;
+      h2,
+      p {
+        margin-left: 40px;
+        margin-right: 0;
+      }
+      h2 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

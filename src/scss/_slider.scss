@@ -1,0 +1,98 @@
+$quote-width: 50px;
+
+#slider {
+  .container {
+    position: relative;
+    max-width: 1500px;
+    .slider-wrap {
+      .slider {
+        width: 100%;
+        margin: 20px auto;
+        margin: 0;
+        text-align: center;
+        color: $main-color;
+        margin-top: 0;
+        margin-bottom: 0;
+        .slide {
+          height: 300px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          .photo {
+            width: 300px;
+          }
+          .quote-container {
+            position: relative;
+            margin: 0 auto;
+            padding: 0 100px;
+            p {
+              font-weight: 300;
+              font-size: 30px;
+            }
+            .name {
+              font-size: 20px;
+              margin-top: 10px;
+            }
+            .quote {
+              width: $quote-width;
+              position: absolute;
+              &:nth-of-type(1) {
+                left: calc(#{$quote-width});
+                top: calc(-#{$quote-width});
+              }
+              &:nth-of-type(2) {
+                right: calc(#{$quote-width});
+                bottom: calc(-#{$quote-width} + 40px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: calc(50% - 40px);
+  width: calc(50%);
+  .arrow-icon {
+    position: absolute;
+    top: 50%;
+    height: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+.arrow-prev {
+  .arrow-icon {
+    left: 0;
+  }
+}
+.arrow-next {
+  left: 50%;
+  .arrow-icon {
+    right: 0;
+  }
+}
+
+.slick-dots {
+  left: 0;
+  li button::before {
+    color: #bbb;
+    opacity: 1;
+  }
+}
+
+.slick-dots {
+  li.slick-active {
+    button::before {
+      color: black;
+      opacity: 1;
+    }
+  }
+}

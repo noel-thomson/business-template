@@ -1,0 +1,48 @@
+#collection {
+  .container {
+    max-width: 1500px;
+    h2 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 4px;
+    }
+    .row-responsive {
+      margin-top: 0;
+      .card {
+        width: 90%;
+        margin: 5% 5%;
+        border-radius: 5px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0) {
+  .col {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .col {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .col {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .col {
+    flex-basis: 25%;
+  }
+}
