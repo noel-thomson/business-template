@@ -10,8 +10,8 @@ mobileToggle.addEventListener('click', () => {
 // close mobile menu after clicking link
 for (let navLink of navLinks) {
   navLink.addEventListener('click', () => {
-    if (header.classList.contains('open')) {
-      header.classList.toggle('open');
+    if (navbar.classList.contains('open')) {
+      navbar.classList.toggle('open');
     }
   });
 }

@@ -80,6 +80,15 @@ $form-color: #0133cb;
         }
         .form-input {
           position: relative;
+          input,
+          textarea {
+            border: none;
+            border-bottom: 1px solid #aeaeae;
+            &:focus {
+              outline: none;
+              border-color: $form-color;
+            }
+          }
           label {
             position: absolute;
             top: 0;
@@ -107,15 +116,6 @@ $form-color: #0133cb;
         }
       }
     }
-  }
-}
-input,
-textarea {
-  border: none;
-  border-bottom: 1px solid #aeaeae;
-  &:focus {
-    outline: none;
-    border-color: $form-color;
   }
 }
 
