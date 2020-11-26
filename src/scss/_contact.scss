@@ -74,6 +74,11 @@ $form-color: #0133cb;
                 font-size: 12px;
               }
             }
+            #email.focus ~ label {
+              transform: translateY(-20px);
+              color: $form-color;
+              font-size: 12px;
+            }
           }
         }
         .form-input {
@@ -97,11 +102,17 @@ $form-color: #0133cb;
             width: 100%;
             height: 90px;
             resize: none;
+            font-family: inherit;
             &:focus ~ label {
               transform: translateY(-20px);
               color: $form-color;
               font-size: 12px;
             }
+          }
+          textarea.focus ~ label {
+            transform: translateY(-20px);
+            color: $form-color;
+            font-size: 12px;
           }
         }
         button {
