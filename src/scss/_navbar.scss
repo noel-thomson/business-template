@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   z-index: 5;
+  transition: all 0.3s ease; //
   .navbar__wrapper {
     height: 100%;
     .navbar__container {
@@ -58,6 +59,9 @@
       }
     }
   }
+}
+.navbar.hide {
+  top: -80px;
 }
 
 // * hamburger *

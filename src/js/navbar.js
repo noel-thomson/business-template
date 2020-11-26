@@ -15,3 +15,19 @@ for (let navLink of navLinks) {
     }
   });
 }
+
+// hide navbar on scroll
+let prevScrollPos = window.pageYOffset;
+window.onscroll = () => {
+  let currentScrollPos = window.pageYOffset;
+  if (window.scrollY === 0) {
+    console.log('top');
+  } else if (prevScrollPos > currentScrollPos) {
+    navbar.classList.remove('hide');
+  } else {
+    if (!navbar.classList.contains('open')) {
+      navbar.classList.add('hide');
+    }
+  }
+  prevScrollPos = currentScrollPos;
+};

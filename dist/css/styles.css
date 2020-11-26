@@ -142,7 +142,8 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5; }
+  z-index: 5;
+  transition: all 0.3s ease; }
   .navbar .navbar__wrapper {
     height: 100%; }
     .navbar .navbar__wrapper .navbar__container {
@@ -184,6 +185,9 @@ section {
             background-color: transparent;
             color: #3a3a3a;
             border: 1px solid #3a3a3a; }
+
+.navbar.hide {
+  top: -80px; }
 
 .top-nav__mobile-toggle {
   display: none;
@@ -281,7 +285,11 @@ section {
   background-image: url("../../assets/imgs/skyline.jpg"); }
   #hero .container {
     font-weight: 700;
-    white-space: nowrap; }
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5); }
     #hero .container h1 {
       font-size: 100px;
       margin: 0 0 15px;
@@ -289,7 +297,7 @@ section {
     #hero .container p {
       font-size: 40px;
       letter-spacing: 2px;
-      margin: 0 0 50px; }
+      margin: 0 0 40px; }
     #hero .container a {
       color: white;
       padding: 15px 20px;
@@ -297,7 +305,7 @@ section {
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 14px;
       transition: all 0.5s ease;
       border-radius: 30px;
       background: rgba(58, 64, 82, 0.3); }
@@ -339,15 +347,20 @@ header {
   #hero .container h1 {
     font-size: 60px; }
   #hero .container p {
-    font-size: 24px; } }
+    font-size: 24px;
+    margin: 0 0 30px; }
+  #hero .container a {
+    padding: 12px 16px;
+    font-size: 12px; } }
 
 @media (max-width: 575px) {
   #hero .container {
     white-space: normal; }
     #hero .container h1 {
-      font-size: 40px; }
+      font-size: 50px; }
     #hero .container p {
-      font-size: 20px; } }
+      font-size: 18px;
+      margin-bottom: 28px; } }
 
 @media (min-width: 0) {
   #feature {
@@ -614,14 +627,12 @@ header {
               bottom: calc(-40px + 40px); } }
 
 #contact {
-  background-color: #fbfbfb; }
+  background-color: #fbfbfb;
+  padding: 80px 0;
+  margin-bottom: 0; }
   #contact p,
   #contact label {
     font-size: 14px; }
-
-#contact {
-  padding: 80px 0;
-  margin-bottom: 0; }
   #contact .container {
     display: flex;
     justify-content: center; }
@@ -630,7 +641,8 @@ header {
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
-      text-align: left; }
+      text-align: left;
+      align-self: start; }
       #contact .container .copy__container p {
         text-transform: uppercase;
         color: #777;
@@ -718,42 +730,52 @@ header {
     padding-top: 40px;
     padding-bottom: 40px; }
     #contact .container {
-      display: flex;
-      justify-content: center;
       flex-direction: column;
       align-items: center; }
       #contact .container .copy__container {
-        padding: 30px 40px;
         max-width: 400px;
-        text-align: left; }
+        align-self: center; }
         #contact .container .copy__container h4 {
           font-size: 30px; }
         #contact .container .copy__container .title-line {
           margin-bottom: 30px; }
       #contact .container .container {
-        max-width: 500px;
-        padding: 30px 40px;
-        background: white;
-        margin: 0; } }
+        max-width: calc(100vw - 80px);
+        padding: 30px 20px; }
+        #contact .container .container form {
+          min-width: calc(100% - 60px); }
+          #contact .container .container form .row {
+            flex-direction: column; }
+            #contact .container .container form .row .form-input {
+              width: 100%; }
+            #contact .container .container form .row .form-input:nth-of-type(1) {
+              margin-right: 0; } }
+
+@media (min-width: 560px) {
+  #contact .container .copy__container h4 {
+    font-size: 50px; }
+  #contact .container .container {
+    max-width: 500px; }
+    #contact .container .container form .row {
+      flex-direction: row; }
+      #contact .container .container form .row .form-input {
+        width: 50%; }
+      #contact .container .container form .row .form-input:nth-of-type(1) {
+        margin-right: 20px; } }
 
 @media (min-width: 992px) {
   #contact .container {
-    display: flex;
-    justify-content: center;
     flex-direction: row; }
     #contact .container .copy__container {
       padding: 30px 40px;
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
-      text-align: left;
       align-self: start; }
       #contact .container .copy__container h4 {
         font-size: 50px; }
     #contact .container .container {
-      width: 500px;
-      padding: 30px 40px;
-      margin: 0; } }
+      padding: 30px 40px; } }
 
 #map {
   padding-top: 0;
