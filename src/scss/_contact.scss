@@ -88,6 +88,7 @@ $form-color: #0133cb;
           textarea {
             border: none;
             border-bottom: 1px solid #aeaeae;
+            border-radius: 0;
             &:focus {
               outline: none;
               border-color: $form-color;

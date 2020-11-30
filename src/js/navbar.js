@@ -21,7 +21,7 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
   if (window.scrollY === 0) {
-    console.log('top');
+    navbar.classList.remove('hide');
   } else if (prevScrollPos > currentScrollPos) {
     navbar.classList.remove('hide');
   } else {
