@@ -29,3 +29,7 @@ window.onscroll = () => {
   }
   prevScrollPos = currentScrollPos;
 };
+
+// if (window.scrollY === 0) {
+//   navbar.classList.remove('hide');
+// }
