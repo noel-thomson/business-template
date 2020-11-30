@@ -20,22 +20,18 @@ for (let navLink of navLinks) {
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
-  // console.log(currentScrollPos);
   if (currentScrollPos <= 0) {
+    // mobile overscroll
     return;
   }
   if (prevScrollPos > currentScrollPos) {
     // scroll up
     navbar.classList.remove('hide');
   } else if (prevScrollPos < currentScrollPos) {
-    // scrolling down
+    // scroll down
     if (!navbar.classList.contains('open')) {
       navbar.classList.add('hide');
     }
   }
   prevScrollPos = currentScrollPos;
 };
-
-// if (window.scrollY === 0) {
-//   navbar.classList.remove('hide');
-// }
