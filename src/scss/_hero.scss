@@ -1,6 +1,6 @@
 #hero {
   font-family: 'Helvetica Neue', sans-serif;
-  height: 100vh;
+  height: 90vh;
   background-image: url('../../assets/imgs/skyline.jpg');
   .container {
     font-weight: 700;
@@ -67,7 +67,7 @@ header {
 
 @media (max-width: 990px) {
   #hero {
-    height: 90vh; //
+    height: 80vh; //
     .container {
       h1 {
         font-size: 80px; //

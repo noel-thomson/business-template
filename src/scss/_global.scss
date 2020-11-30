@@ -88,31 +88,3 @@ section {
   width: 100%;
   padding: 0 5%;
 }
-
-// grid with fixed width items
-
-// .col-4-fixed {
-//   width: calc((#{$container-width-inner}) / 4);
-// }
-// .col-3-fixed {
-//   width: calc((#{$container-width-inner}) / 3);
-// }
-// .col-2-fixed {
-//   width: calc((#{$container-width-inner}) / 2);
-// }
-
-// @media (max-width: calc(((#{$container-width} * 1) - 1px))) {
-//   .grid-fixed {
-//     width: calc((#{$container-width} * 0.75));
-//   }
-// }
-// @media (max-width: calc(((#{$container-width} * 0.75) - 1px))) {
-//   .grid-fixed {
-//     width: calc((#{$container-width} * 0.5));
-//   }
-// }
-// @media (max-width: calc(((#{$container-width} * 0.5) - 1px))) {
-//   .grid-fixed {
-//     width: calc((#{$container-width} * 0.25));
-//   }
-// }
