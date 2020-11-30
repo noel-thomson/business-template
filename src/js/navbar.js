@@ -19,10 +19,13 @@ for (let navLink of navLinks) {
 // hide navbar on scroll
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
+  console.log(currentScrollPos);
   let currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
+    // scroll up
     navbar.classList.remove('hide');
-  } else if (prevScrollPos < currentScrollPos) {
+  } else if (prevScrollPos < currentScrollPos && currentScrollPos >= 80) {
+    // scrolling down
     if (!navbar.classList.contains('open')) {
       navbar.classList.add('hide');
     }
